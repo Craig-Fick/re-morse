@@ -1,0 +1,41 @@
+# dictionary
+dic = {" ": " ", 
+"A" : ".-", 
+"B" : "-...",
+"C" : "-.-.",
+"D" : ".",
+"E" : "..-.",
+"F" : "..-.",
+"G" : "--.",
+"H" : "....",
+"I" : "..",
+"J" : ".---",
+"K" : "-.-",
+"L" : ".-..",
+"M" : "--",
+"N" : "-.",
+"O" : "---",
+"P" : ".--.",
+"Q" : "--.-",
+"R" : ".-.",
+"S" : "...",
+"T" : "-",
+"U" : "..-",
+"V" : "...-",
+"W" : ".--",
+"X" : "-..-",
+"Y" : "-.--",
+"Z" : "--.."}
+
+def Morse():
+    bit = []
+    inp = str(input("Type what you would like converted to Morse code (letters only):"))
+    for key, value in dic.items():
+        if len(inp) >= 1:
+            bit = list(inp.upper())
+            spell = list(map(dic.get, bit))
+            print(spell)
+            break
+        else:
+            print("Inproper input.")
+            break
